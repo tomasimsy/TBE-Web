@@ -1307,3 +1307,71 @@ body {
     }
 
 }
+
+.footer-section .contents {
+    min-height: 80vh;
+    padding: 7rem 0;
+    
+    .copyright-title{
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        @media(max-width: $sm){
+            padding: 7rem 0;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        @media(max-width: $md){
+            padding: 7rem 0;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+
+    .copyright-info-title{
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        margin-top: 80px;
+        @media(max-width: $sm){
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+    }
+
+    .copyright-info-text{
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px; 
+        @media(max-width: $sm){
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+
+    .footer-links{
+        font-size: 18px;
+        font-family: Aeonik;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        div{
+            margin-top: 24px;
+        }
+    }
+}
+
