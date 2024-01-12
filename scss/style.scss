@@ -1,5 +1,4 @@
 
-
 $white: #ffffff;
 $dark: #0A0A0A;
 $primary: #3b5d50;
@@ -1137,6 +1136,7 @@ body {
     .benefit-box-top{
         position : absolute;
         right: 0;
+        padding: 7rem 0;
         @media (max-width: $sm){
             position: static;
         }
@@ -1150,6 +1150,9 @@ body {
 
         .bonus-box{
             padding: 4rem 2rem;
+            @media (max-width: $sm){
+                padding: 0;
+            }
 
         }
 
@@ -1328,6 +1331,8 @@ body {
         font-style: normal;
         font-weight: 400;
         line-height: 32px;
+        background-color: #35d485;
+
         @media(max-width: $sm){
             padding: 7rem 0;
             font-size: 20px;
