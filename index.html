@@ -22,7 +22,6 @@
     <body id="page-top" >
 
         <!-- Navigation-->
-
         <nav class="custom_navbar navbar  navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
             <div class="container">
                 <a href="index.html" class="navbar-brand"><img src="assets/logo/TBE_logo.png" alt="logo" ><span>.</span></a>
@@ -92,7 +91,7 @@
                             <p class="home-who-we-are-text pe-5">
                                 <span>We are a company of engineers who are </span> <span>convergent thinkers with 
                                 extensive </span>experience in creating, building, and  <span> solving airport solutions.</span></p>
-                            <p><a href="#" class="cta_link text-light">Learn More</a></p>
+                            <p><a href="Who_we_are.html" class="cta_link text-light">Learn More</a></p>
                         </div>
                     </div>
             </div>
@@ -137,7 +136,7 @@
                                 and construction administration services.
                         </div>
                         <div class="col-md-4 col-lg-3  ps-0">
-                            <a href="#" class="cta_link text-dark">Learn More</a>
+                            <a href="what_we_do.html" class="cta_link text-dark">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -151,7 +150,7 @@
                         <div class="col-md-4 col-lg-3  ps-0">
                             <p>Design your life, your career, and our future. Come join the team.</p>
                             <br>
-                            <a href="#" class="cta_link text-dark">View Openings</a>
+                            <a href="careers.html" class="cta_link text-dark">View Openings</a>
                         </div>
                     </div>
                 </div>
@@ -173,7 +172,7 @@
                             <img src="assets/logo/TBE_logo.png" alt="logo">
                         </span> <br>
                         <span class="copyright-title">
-                            Copyright 2024
+                            Copyright <span id="currentYear"></span>
                         </span>
                     </div>
                     <div class="col-lg-12 align-self-center ">
@@ -183,7 +182,7 @@
                                 <p class="copyright-info-title">Contact</p>
                                 <p class="copyright-info-text">
                                     
-                                    <a class="email_link text-white" href="mailto:Careers@tbeclt.com" > Careers@tbeclt.com</a>
+                                    <a class="email_link text-white" href="mailto:Careers@tbeclt.com" > careers@tbeclt.com</a>
                                     <br>
                                     <a class="email_link text-white" href="mailto:Tbe@tbeclt.com.com" > info@tbeclt.com</a>
                                 </p>
@@ -211,16 +210,16 @@
                         <!-- Menu list row  -->
                         <div class="row d-flex align-items-end justify-content-between footer-links text-white ">
                             <div class="col-md-3 col-lg-2 ">
-                                <a href="#" class="text-white">Who We Are</a>
+                                <a href="Who_we_are.html" class="text-white">Who We Are</a>
                             </div>
                             <div class="col-md-3 col-lg-2 ">
-                                <a href="#" class="text-white">What We Do</a>
+                                <a href="what_we_do.html" class="text-white">What We Do</a>
                             </div>
                             <div class="col-md-3 col-lg-1 ">
-                                <a href="#" class="text-white">Careers</a>
+                                <a href="careers.html" class="text-white">Careers</a>
                             </div>
                             <div class="col-md-3 col-lg-2  flex-lg-grow-1"> <!-- Added flex-grow-1 class -->
-                                <a href="#" class="text-white">Contact Us</a>
+                                <a href="contact_us.html" class="text-white">Contact Us</a>
                             </div>
                             <div class="col-md-3 col-lg-1   d-flex justify-content-lg-end ">
                                 <a href="#" class="text-white">Instagram</a>
@@ -230,7 +229,8 @@
                             </div>
                             <div class="col-md-3 col-lg-1   d-flex justify-content-lg-end ">
                                 <a href="#" class="text-white">Linkedin</a>
-                            </div>                        </div>
+                            </div>                       
+                        </div>
 
                     </div>
 
@@ -253,6 +253,11 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+        <!-- Get current year script  -->
+        <script>
+            document.getElementById("currentYear").textContent = new Date().getFullYear();
+        </script>
     </body>
 </html>
 
