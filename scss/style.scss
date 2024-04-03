@@ -123,7 +123,7 @@ body {
 .custom_nav_link_light{
     // color: #ffffff;
     font-family: "Aeonik";
-    // font-size: 24px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -423,6 +423,8 @@ body {
 
                 //===OR===use this option, less queezing
                 height: 500px;
+                width: auto;
+                
             }
         }
     }
@@ -1422,7 +1424,7 @@ footer {
 
 .footer_logo{
     img{
-        width:  clamp(18.75rem, 14.2857rem + 14.2857vw, 20rem);
+        width:  clamp(18.75rem, 14.2857rem + 14.2857vw, 24rem);
         padding-bottom: 4px;
     }
 }
@@ -1442,7 +1444,7 @@ footer {
     }
 
     .copyright-info-title{
-        font-size: 28px;
+        font-size: 24px;
         font-style: normal;
         font-weight: 400;
         line-height: 32px;
@@ -1816,7 +1818,7 @@ footer {
     }
 
     .copyright-info-title{
-        font-size: 28px;
+        font-size: 24px;
         font-style: normal;
         font-weight: 400;
         line-height: 32px;
@@ -2221,7 +2223,7 @@ footer {
     }
 
     .what_we_do_text{
-        font-size: 18px;
+        font-size: 12pt;
         font-style: normal;
         font-weight: 500;
         line-height: 32px;
@@ -2283,7 +2285,7 @@ footer {
     padding: 7rem 0;
    
     .what_we_do_text{
-        font-size: 18px;
+        font-size: 12pt;
         font-style: normal;
         font-weight: 500;
         line-height: 32px;
@@ -2309,7 +2311,7 @@ footer {
 
     .design_list_text{
         font-weight: 500;
-        font-size: 14pt;
+        font-size: 12pt;
         line-height: 34px;
     }
     img{
@@ -2345,7 +2347,7 @@ footer {
         min-height: 100vh;
        
         .what_we_do_text2{
-            font-size: 18px;
+            font-size: 12pt;
             font-style: normal;
             font-weight: 500;
             line-height: 32px;
@@ -2424,7 +2426,7 @@ footer {
     .planning_services_text{
         font-family: "Aeonik";
         font-weight: 500;
-        font-size: 18px;
+        font-size: 12pt;
         line-height: 32px;
         padding-bottom: 7rem;
     }
@@ -2432,7 +2434,7 @@ footer {
     .how_we_support_text{
         font-family: "Aeonik";
         font-weight: 500;
-        font-size: 18px;
+        font-size: 12pt;
         line-height: 32px;
         padding: 7rem 0;
     }
@@ -2515,17 +2517,18 @@ footer {
         z-index: 15;
         position: relative;
         top: 0;
+
         h1{
             font: "Aeonik";
             font-weight: 400;
-            font-size: 64px;
+            font-size: 62px;
             line-height: 64px;
         }
     }
     .planning_services_text{
         font-family: "Aeonik";
         font-weight: 500;
-        font-size: 18px;
+        font-size: 12pt;
         line-height: 32px;
         padding-bottom: 7rem;
     }
@@ -2535,6 +2538,8 @@ footer {
         font-weight: 500;
         font-size: 18px;
         line-height: 32px;
+
+
     }
 
     .right_bg_text_container{
@@ -2554,6 +2559,11 @@ footer {
     }
 }
 
+.sub_heading{
+    h1 {
+        font-size: clamp(3.375rem, 2.79rem + 1.613vw, 4rem);
+    }
+}
 //Who we are section 
 .planning_services_4{
     position: relative;
@@ -2594,6 +2604,12 @@ footer {
         font-size: 18px;
         line-height: 32px;
         padding: 7rem 0;
+
+        // h1{
+        //     font: "Aeonik";
+        //     font-size: clamp(3.375rem, 2.79rem + 1.613vw, 4rem);
+        //     font-weight: 400;
+        // }
     }
 
     .right_bg_text_container{
@@ -2651,7 +2667,7 @@ footer {
         }
     
         .what_we_do_text{
-            font-size: 18px;
+            font-size: 12pt;
             font-style: normal;
             font-weight: 500;
             line-height: 32px;
@@ -2714,7 +2730,7 @@ footer {
             }
 
             .what_we_do_text{
-                font-size: 18px;
+                font-size: 12pt;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 32px;
@@ -2756,7 +2772,7 @@ footer {
 
     .what_we_do_text{
         margin-top: 7rem;
-        font-size: 18px;
+        font-size: 12pt;
         font-style: normal;
         font-weight: 500;
         line-height: 32px;
