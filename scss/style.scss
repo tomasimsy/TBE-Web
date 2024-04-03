@@ -1,5 +1,4 @@
 
-
 $white: #ffffff;
 $dark: #0A0A0A;
 $primary: #CC9900;
@@ -11,19 +10,27 @@ $sm: 576px;
 $md:768px;
 $lg:1024px;
 $xxl:1400px;
+
 @font-face {
-    font-family: "MyFont";
-    src: url("../assets/font/Aeonik-Air.otf") format("oft");
+    font-family: "Aeonik";
+    src: url("../assets/font/Aeonik-Regular.ttf");
+
+    // src: url("../assets/font/Aeonik-/Aeonik-Air.otf");
+    // src: url("../assets/font/Aeonik-Bold.otf")
   }
   
-  body {
-    font-family: "MyFont", sans-serif;
+@font-face {
+    font-family: "Gill-sans";
+    src: url("../assets/font/Gill_Sans_Bold.otf");
+    
+    // src: url("../assets/font/Aeonik-/Aeonik-Air.otf");
+    // src: url("../assets/font/Aeonik-Bold.otf")
   }
 
 body {
     overflow-x: hidden;
     position: relative;
-    font-family: Aeonik;
+    font-family: "Aeonik";
 }
 
 //Custom Container
@@ -46,6 +53,7 @@ body {
 @media (min-width: 576px) {
   .container-custom-sm, .container-custom {
     max-width: 540px;
+
   }
 }
 @media (min-width: 768px) {
@@ -77,6 +85,8 @@ body {
 
 .inovation-section {
     color:$light;
+    font-family: "Aeonik";
+
     
     .inovation-excerpt{
         max-width: 450px;
@@ -85,7 +95,7 @@ body {
     }
     h1 {
         font-weight: 900;
-
+        font-family: "Aeonik";
         color: $white;
         margin-bottom: 30px;
         @media(min-width: $xxl){
@@ -96,19 +106,48 @@ body {
 }
 
 //Custom navbar
+.custom_nav_link{
+    // color: #ffffff;
+    font-family: "Aeonik";
+    // font-size: clamp(0.75rem, 0.6607rem + 0.2857vw, 0.875rem);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align:right;
+    padding: 1em;
+    opacity: 1;
+    color: #fff;
+
+}
+.custom_nav_link_light{
+    // color: #ffffff;
+    font-family: "Aeonik";
+    // font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align:right;
+    padding: 1em;
+    opacity: 1;
+    color: #0e0d0d;
+
+}
 .custom_navbar {
-    background: $primary;
-    color: $white;
+    // color: $white;
+    font-family: "Aeonik";
 
     .navbar-brand {
         font-size:16px;
-        color: $white;
+        // color: $white;
         font-weight: 600;
-        > span{
-            opacity: .4;
-        }
+        
         @media(max-width: $sm){
             font-size: 14px;
+        }
+
+        img{
+            width:  clamp(18.75rem, 14.2857rem + 14.2857vw, 25rem);
         }
     }
 
@@ -124,6 +163,7 @@ body {
     }
 
     .custom-navbar-nav {
+    
         li{
             @media(min-width: $lg){
                 margin-left: 15px;
@@ -131,10 +171,9 @@ body {
             }
             a{
                 font-weight: 400;
-                color: $white!important;
-                opacity: .5;
                 transition:.3s all ease;
                 position:relative;
+                display: block;
                 &:before{
                     @media (min-width: $md) {
                         content: "";
@@ -167,9 +206,66 @@ body {
                     }
                 }
             }
+            a:active{
+                // when link is clicked, change color to gold
+                color: $secondary;
+            }
         }
+
     }
 
+    .custom-navbar-nav-light {
+    
+        li{
+            color: #000;
+            @media(min-width: $lg){
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            a{
+                font-weight: 400;
+                transition:.3s all ease;
+                position:relative;
+                display: block;
+                &:before{
+                    @media (min-width: $md) {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left:8px;
+                        right: 8px;
+                        background:$secondary;
+                        height: 1px;
+                        opacity: 1;
+                        visibility: visible;
+                        width: 0%;
+                        transition:.15s all ease-out;
+                    }
+                }
+                &:hover{
+                    opacity: 1;
+                    &:before{
+                        width: calc(100% - 15px);
+                    
+                    }
+                }
+            }
+            &.active{
+                a {
+                    opacity: 1;
+                    &:before {
+                        width: calc(100% - 16px);
+
+                    }
+                }
+            }
+            a:active{
+                // when link is clicked, change color to gold
+                color: $secondary;
+            }
+        }
+
+    }
     .custom-navbar-cta {
         margin-left:0!important;
         flex-direction: row;
@@ -193,10 +289,17 @@ body {
     padding-bottom: 10px;
     border-bottom:solid;
     border-color: $secondary;
-    border-width: 1px;
+    border-width: 2px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
-//Home index section
+
+
+
+//Home index  section
 .tbi-homepage-l-text10 {
     left: 7px;
     color: #343434;
@@ -235,34 +338,196 @@ body {
     }
   }
 
-//Hero section
-.hero-heading{
-    
-    font-family: MyFont;
-    font-size: 100px;
+  .page_heading{
+    font-size:  clamp(3.875rem, 2.1786rem + 5.4286vw, 6.25rem);
     font-style: normal;
     font-weight: 400;
-    line-height: 100px; /* 100% */
+    line-height: clamp(4rem, 2.3929rem + 5.1429vw, 6.25rem);
     letter-spacing: -2px;
+
     @media(max-width: $sm){
-        font-size: 62px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 64px; /* 103.226% */
         letter-spacing: -0.62px;
     }
 }
+//Hero section
+.text_title{
+    font-family: "Aeonik";
+    font-size: clamp(40px, 8vw,64px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 64px; /* 100% */
+    letter-spacing: -0.64px;
+    margin-bottom: 48px;
 
-//Home page - Who We are section
+}
 
-.home-who-we-are-section{
+.hero_black_box{
+    min-height: 10vh;
+}
+.page_title{
+    h1 {
+        font-size: clamp(3.8rem, 1.895rem + 5.806vw, 6.25rem);   
+        font: "Aeonik";
+        font-weight: 400;
+        line-height: 64px;
+    }
+}
+
+.hero_container{
+    position: relative;
+    min-height: 180vh;
+    // padding-top: 6rem;
+    background-color: $dark;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+
+
+    @media(width <= $md){
+        min-height: 100vh;
+    }
+
+    .hero-heading{
+        font-size: clamp(4rem, 1.895rem + 5.806vw, 6.25rem);        
+
+        font-style: normal;
+        font-weight: 400;
+        line-height: clamp(4rem, 2.3929rem + 5.1429vw, 6.25rem);
+        letter-spacing: -2px;
+        z-index: 10;
+        position: relative;
+        top: 50px;
+        @media(max-width: $sm){
+            letter-spacing: -0.62px;
+        }
+    }
+
+    .hero_img_container{
+        position: absolute;
+        left: 0;
+
+        background-size: fit;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 150vh;
+        
+        img{
+            width: 100vw;
+            // height: 120vh;
+
+            @media(max-width: $sm){
+                //===use this option
+                // height: auto;
+                // width: 100%;
+
+                //===OR===use this option, less queezing
+                height: 500px;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+//Home Page-What we do section 
+.home_what_we_do_section{
+    position: relative;
     min-height: 100vh;
+    
+    .custom_container{
+        min-height: 150vh;
+        padding: 7rem 0;
+
+        .text_title{
+            font-family: "Aeonik";
+            // font-size: 64px;
+            font-size: clamp(3.375rem, 2.79rem + 1.613vw, 4rem);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 64px; /* 100% */
+            letter-spacing: -0.64px;
+
+            @media(min-width: $lg){
+                padding-top: 4rem;
+            }
+            
+        }
+    }
+
+    .custom_container_2{
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #84dfbc;
+        min-height: 150vh;
+        padding-left: 4rem;
+        padding-top: 14rem;
+    }
+
+    .who_we_are_text{
+        margin-top: 48px;
+        padding-bottom: 7rem;
+        border-bottom: solid;
+        border-width: 1px;
+        font-size: 12pt;
+    }
+
+    .career_block{
+        padding-top: 7rem;
+
+        .career_title{
+            color: #1A1A1A;
+            font-family: "Aeonik";
+            font-size: clamp(40px, 8vw,64px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 64px; /* 100% */
+            letter-spacing: -0.64px
+        }
+
+        .career_text{
+            color: #1A1A1A;
+            font-family: Aeonik;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 32px;
+        }
+    }
+}
+
+.paragraph_text{
+    font-family: "Aeonik";
+    font-size: 12pt;
+    line-height: 24px;
+}
+//Home page - Who We are section
+.home-who-we-are-section{
+    min-height: 100dvh;
     padding: 7rem 0;
     position: relative;
     color: #ffffff;
     z-index: 10;
 
-    
+    .home_left_img{
+        width: clamp(11.25rem, 3.6607rem + 24.2857vw, 21.875rem);
+        z-index: 10;
+        @media(max-height: 480px){
+            
+            height: 240px;
+            width: auto;
+        }
+    }
+    .home_who_we_are_text{
+        @media(max-height: 480px){
+            position: relative;
+            top: -180px;
+        }
+    }
     .home-text-area{
         display: flex;
         justify-content: center;
@@ -273,95 +538,132 @@ body {
             justify-content: end;
             align-items: center;
         }
+
+       @media (min-width: $md){
+        p span {
+            display: block;
+        }
+       }
     }
 
     .home-est-text{
         position: absolute;
         left: 0px;
-        top: -250px;
+        top: -110px;
         color: rgba(52, 52, 52, 1);
-        width: 401px;
+        width: auto;
         height: auto;
-        font-size: 400px;
+        // font-size: 400px;
+        font-size: clamp(10.25rem, -0.2857rem + 33.7143vw, 25rem);
+        // font-size: clamp(6.625rem, -2.0357rem + 27.7143vw, 18.75rem);
         font-style: Regular;
         text-align: left;
         font-family: Aeonik;
         font-weight: 400;
-        line-height: 300px;
+        line-height: clamp(7.5rem, -0.5357rem + 25.7143vw, 18.75rem);
         font-stretch: normal;
         text-decoration: none;
         z-index: -1;
-
-        
-        @media(max-width: $sm){
-            
-            top: -100px;
-             font-size: 164px;
-             line-height: 150px;
-             width: 401px;
-
-        }
     }
 
     .home-1994-text{
         position: absolute;
         right: 0px;
-        bottom: 100px;
+        bottom: 150px;
         color: rgba(52, 52, 52, 1);
         width: 401px;
         height: auto;
-        font-size: 400px;
+        font-size: clamp(10.25rem, -0.2857rem + 33.7143vw, 25rem);
         font-style: Regular;
-        text-align: left;
-        font-family: Aeonik;
+        text-align: right;
+        font-family: "Aeonik";
         font-weight: 400;
-        line-height: 300px;
+        line-height: clamp(7.5rem, -0.5357rem + 25.7143vw, 18.75rem);
         font-stretch: normal;
-        text-decoration: none;       
-         z-index: -1;
+        text-decoration: none;
+        z-index: -1;
+
 
 
         @media(max-width: $sm){
             font-size: 164px;
-            line-height: 150px;
-             bottom: 100px;
+            line-height: 120px;
+            bottom: 100px;
         }
     }
 
     .home-who-we-are-left-img{
         position: absolute;
-        bottom: 180px;
+        top: 45%;
         left:0;
         z-index: -1;
+        @media(max-width: $md){
+                top: 13%;
+            }
 
         img{
-            width: 350px;
-            height: 487px;
+            // width:  clamp(11.25rem, 3.6607rem + 24.2857vw, 21.875rem);
+            // height:  clamp(15.625rem, 5.0446rem + 33.8571vw, 30.4375rem);
+            width: clamp(11.25rem, 3.6607rem + 24.2857vw, 21.875rem);
+            height: auto;
+
                 @media(max-width: $sm){
-                    bottom: 800px;
-                    width: 200px;
-                    height: 287px;
+                    width: 35vw;
+                    height: auto;
+                    // position: relative;
+                    // top: -50px;
+                    // width: 180px;
+                    // height: 250px;
+                    // flex-shrink: 0;
                 }
+                // @media(width: $md){
+                //     position: relative;
+                //     top: 100px;
+                //     width: 260px;
+                //     height: 350px;
+                //     flex-shrink: 0;
+                // }
+
             }
-            @media(max-width: $sm){
-                bottom: 700px;
+
+            @media(max-width: $md){
+                bottom: 800px;
+
             }
 
     }
+
     .home-who-we-are-right-img{
         position: absolute;
-        bottom: -100px;
+        bottom: -150px;
         right:0;
         img{
-            width: 589px;
-            height: 381px;
-            @media(max-width: $sm){
-                width: 289px;
-                height: auto;
+            width: clamp(17.5rem, 1.875rem + 28.333vw, 27.375rem);
+            height: auto;
+
+            @media(max-width: $md){
+                position: relative;
+                bottom:60px;
+
                 }
+
+            @media(width: $md){
+                    width: 469px;
+                    height: 261px;
+                    }
+
+            @media(max-height: 480px){
+                        position: relative;
+                        top: -100px;
+                        height: 180px;
+                        width: auto;
+                    }
         }
     }
 }
+
+
+
 // We help section 
 .images-section {
     z-index: 5;
@@ -968,10 +1270,7 @@ body {
 
 
 //planning services IMage
-.planning-image{
-    // width: 50%;
 
-}
 
 
 //Assistance Sectin 
@@ -1102,12 +1401,38 @@ body {
 }
 
 // Copyright section 
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+  }
+  
+  ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  ul li:last-child {
+    margin-right: 0;
+  }
+
+
+.footer_logo{
+    img{
+        width:  clamp(18.75rem, 14.2857rem + 14.2857vw, 20rem);
+        padding-bottom: 4px;
+    }
+}
+
 .copyright-section {
     min-height: 50vh;
     padding-bottom: 3rem;
 
     .copyright-title{
-        font-size: 28px;
+        font-size: 24px;
         font-style: normal;
         font-weight: 400;
         line-height: 32px;
@@ -1124,15 +1449,15 @@ body {
     }
 
     .copyright-info-text{
-        font-size: 20px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
-        line-height: 32px; 
+        line-height: 22px; 
     }
 
     .footer-links{
-        font-size: 18px;
-        font-family: Aeonik;
+        font-size: 14px;
+        font-family: "Aeonik";
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -1148,116 +1473,116 @@ body {
 }
 
 
-//Come Join us page
-.come-join-us-section{
-    min-height: 80vh;
+
+//Come Join us page/ Career
+.come_join_us{
     position: relative;
-    
+    margin-top: 7rem;
+    color: rgb(7, 7, 7);
+    overflow: hidden;
 
-    .one-image{
-        position: relative;
-        z-index: 4;
-    }
-    .join-us-title{
-        color: #1A1A1A;
-        font-size: 100px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 100px; /* 100% */
-        letter-spacing: -2px;
-        @media(max-width: $sm){
-            font-size: 62px;
-        }
-
-    }
-
-    .x-one{
-        position: relative;
-        overflow-x: hidden;
-        
-        .join-us-image, img{
-            position: absolute;
-            bottom: 0px;
-            width: 504px;
-            background-color: #4ba5a0;
-
-    
-    }
-
-}
-}
-
-.join-us-section{
-    position: relative;
-    z-index: -1;
-    
-
-    }
-    .top-container{
-        min-height: 80vh;
-        overflow-x: hidden;
-        .join-us-image{
-
-            // background-image: url('../assets/img/demo-image-02.jpg' );
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: absolute;
-            top: -300px;
-            // height: 600px;
-            // width: 800px;
-            @media(max-width: $sm){
-                padding-top: 7rem;
-                font-size: 62px;
-                // height: 500px;
-                // width: 300px;
-            }
-
-            img{
-                height: 800px;
-                width: auto;
-                @media(max-width: $sm){
-                    height: 400px;
-                    width: 400px;
-                }
-                // @media(min-width: $md){
-                //     height: 400px;
-                //     width: 400px;
-                // }
-            }
-
-
-        }
-    }
-    .bottom-container{
-        min-height: 80vh;
-
+    .white_box{
         position: absolute;
-        left: 0;
-        top: 0;
+        top: 0px;
+        left: -400px;
+        height: 50%;
+        width: 300%;
         z-index: -1;
+        background-color: #ffffff;
+
     }
+    .left_bg_container{
+        position: absolute;
+        top: 0;
+        padding: 0;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .right_bg_container{
+        position: relative;
+        top: 0;
+    }
+   
+    .right_bg_text_container{
+        z-index: 2;
+        position: relative;
+        top: 0;
+        padding-bottom: 7rem;
+
+        img{
+            width: 1044px;
+            height: auto;
+            z-index: 10;
+
+        }
+
+
+    }
+
+}
+
+// .come-join-us-section{
+//     min-height: 30vh;
+//     position: relative;
+    
+
+//     .one-image{
+//         position: relative;
+//         z-index: 4;
+//     }
+//     .join-us-title{
+//         color: #1A1A1A;
+//         font-size: 100px;
+//         font-style: normal;
+//         font-weight: 400;
+//         line-height: 100px; /* 100% */
+//         letter-spacing: -2px;
+//         @media(max-width: $sm){
+//             font-size: 62px;
+//         }
+
+//     }
+
+//     .x-one{
+//         position: relative;
+//         overflow-x: hidden;
+        
+//         .join-us-image, img{
+//             position: absolute;
+//             bottom: 0px;
+//             width: 504px;
+//             background-color: #4ba5a0;
+
+    
+//     }
+
+// }
+// }
+
 
 //Our benefit
 .benefit-box{
     position: relative;
-    
+
     .benefit-box-top{
-        position : absolute;
-        right: 0;
-        padding: 7rem 0;
+        z-index: 5;
+        padding: 7rem 0 ;
         @media (max-width: $sm){
             position: static;
         }
 
         .our-benefit-title{
-            font-style: normal;
+            font-family: "Aeonik";
+            font-size: 64px;
             font-weight: 400;
-            line-height: 64px; /* 100% */
-            letter-spacing: -0.64px;
+            line-height: 64px;
+            letter-spacing: -0.01em;
+            text-align: left;
         }
 
         .bonus-box{
-            padding: 4rem 2rem;
+            padding: 2rem 2rem;
             @media (max-width: $sm){
                 padding: 0;
             }
@@ -1289,12 +1614,14 @@ body {
             line-height: 30px;
         }
     }
-    .benefit-box-bottom{
+   
+    .left_container{
         position: absolute;
-        left: 0px;
-        min-height: 80vh;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 50vw;
         z-index: -1;
-
     }
 
 
@@ -1313,25 +1640,51 @@ body {
 
 .position-section{
     // min-height: 100vh;
-    padding-top: 20rem;
     overflow-x: hidden;
-    background-color: #ffffff;
+    background-color: #fff;
+    padding-top: 7rem;
 
-    @media (max-width: $sm){
-        padding: 1rem 0;
-        margin-bottom: 4rem;
-    }
-    @media (min-width: $md){
-        margin-top: 40rem;
-    }
-    @media (min-width: $lg){
-        margin-top: 0rem;
+    // @media (max-width: $sm){
+    //     padding: 1rem 0;
+    //     margin-bottom: 4rem;
+    // }
+    // @media (min-width: $md){
+    //     margin-top: 40rem;
+    // }
+    // @media (min-width: $lg){
+    //     margin-top: 0rem;
 
-    }
+    // }
 
     .position-listing{
         padding-bottom: 7rem;
 
+    }
+
+    .accordion-body{
+        h4{
+            font-family: "Aeonik";
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: left;
+
+        }
+        p {
+            font-family: Aeonik;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: left;
+        }
+        a{
+            font-family: Aeonik;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21.6px;
+            text-align: left;
+
+        }
     }
 
 
@@ -1339,16 +1692,14 @@ body {
     .office-box{
         position: relative;
         padding: 7rem 0;
-        background: #F2F2F2;
         z-index: 6;
-
+        
         .office-box-bottom{
             min-height: 100%;
             position: absolute;
             top: 0;
             right: -500px;
             padding: 7rem 0;
-            background: #F2F2F2;
             z-index: -1;
     
         }
@@ -1360,11 +1711,15 @@ body {
                 font-weight: 400;
                 line-height: 64px; /* 100% */
                 letter-spacing: -1.28px;
+                
             }
     
             .office-image-one img{
                 width: 453px;
-                height: 450px;
+                height: 550px;
+                -webkit-filter: grayscale(100%); /* For Safari 6.0 - 9.0 */
+                filter: grayscale(100%);
+                
             }        
             .office-image-two {
                 
@@ -1416,7 +1771,9 @@ body {
 
 .not-found-section{
     min-height:50vh;
-    padding: 7rem 0;
+    padding-top: 7rem ;
+    padding-bottom: 7rem ;
+
     .not-found-title{
         font-size: 100px;
         font-style: normal;
@@ -1433,13 +1790,12 @@ body {
 .footer-section .contents {
     min-height: 80vh;
     padding: 7rem 0;
-    background-color: #35d485;
+    
     .copyright-title{
-        font-size: 28px;
+        font-size: 24px;
         font-style: normal;
         font-weight: 400;
         line-height: 32px;
-        background-color: #35d485;
 
         @media(max-width: $sm){
             padding: 7rem 0;
@@ -1448,6 +1804,7 @@ body {
             font-weight: 400;
             line-height: 24px;
         }
+        
 
         @media(max-width: $md){
             padding: 7rem 0;
@@ -1474,39 +1831,44 @@ body {
     }
 
     .copyright-info-text{
-        font-size: 20px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
-        line-height: 32px; 
-        @media(max-width: $sm){
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 24px;
-        }
+        line-height: 22px; 
     }
 
     .footer-links{
-        font-size: 18px;
-        font-family: Aeonik;
+        font-size: 12px;
+        font-family: "Aeonik";
         font-style: normal;
         font-weight: 500;
         line-height: normal;
+        color: #bdc739;
 
         div{
             margin-top: 24px;
         }
+        a{
+            color: #bdc739;
+            text-decoration: none;
+        }
     }
 }
 
+.menu ul{
+    list-style: none;
+}
+
+.menu li{
+    display: inline;
+}
 
 //Who we are page
 .who_we_are_section{
+    min-height: 30vh;
 
     .who_we_are_content{
         position: relative;
-
-        min-height: 80vh;
             display: flex;
             align-items: center;
             @media(max-width: $sm){
@@ -1516,13 +1878,15 @@ body {
 
             .who_we_are_image{
                 position: absolute;
-                background-image: url('../assets/img/demo-image-02.jpg');
+                background-image: url('../assets/stock_img/suganth-yAV-5jb1pyA-unsplash2.jpg');
                 background-repeat: no-repeat;
                 background-size: cover;
                 right: 0px;
                 bottom: -500px;
-                width: 2305px;
+                width: 1305px;
                 height: 815px;
+                margin-top: 96px;
+                margin-bottom: 48px;
                 @media(max-width: $sm){
                     bottom: -100px;
                     width: 1305px;
@@ -1532,28 +1896,32 @@ body {
     }
 
     .who_we_are_title{
-        font-size: 100px;
+        font-size: clamp(4rem, 1.895rem + 5.806vw, 6.25rem);        
         font-style: normal;
         font-weight: 400;
         line-height: 100px; /* 100% */
         letter-spacing: -2px;
-        @media(max-width: $sm){
-            font-size: 64px;
-        }
+        padding-top: 7rem;
+    
     }
 
 
 }
 
-
 .who_we_are_2nd_section{
     background-color: #F2F2F2;
-    padding-bottom: 7rem;
-
+    position: relative;
+    
+    img{
+        position: relative;
+        height: clamp(auto, 80vh, 815px); 
+        width: clamp(299px, 80vw, 1305px) ;
+        z-index: 16;
+        // height: 815px;
+        // width: 1305px;
+    }
 
     .container{
-        min-height: 80vh;
-
         @media(max-width: $sm){
             min-height: 60vh;
 
@@ -1570,32 +1938,68 @@ body {
             }
         }
     }
+
+    .white_box{
+        width: 100vw;
+        background-color: #ffffff;
+        height: 50%;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+
+    }
+
+
+      
+    
 }
 
+.left {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .right {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  
 
 // Horizontal scroll img section 
 .horizontal_scroll_img_section{
     background-color: #F2F2F2;
-    padding-top: 4rem;
+    padding-top: 7rem;
     padding-bottom: 14rem;
 
+    @media(max-width: $sm){
+        padding-top: 48px;
+    }
 
     .container{
-
         min-height: 80vh;
     }
 
-    .scroll-x{
+    .scroll_x{
+        position: relative;
         overflow-x: scroll;
         padding: 7rem 0;
         border-bottom: solid;
         border-color: #919191;
         border-width: 2px;
+        scroll-snap-type: x mandatory;
+        height: auto;
+
+        img{
+            position: relative;
+            left: -100px;
+            scroll-snap-align: start;
+            scroll-margin: 40px;
+        }
     }
 }
 
 // Overview section 
-
 .overview-section{
     position: relative;
     color:#fff;
@@ -1605,22 +2009,25 @@ body {
         min-height: 100vh;
         position: relative;
         top: -100px;
+        background-color: $dark;
         z-index: 1;
         @media (max-width: $sm){
             padding: 7rem 0;
+            position: relative;
+            margin-left: 0;
         }
 
         @media (max-width: $md){
-            left: 0;
             padding: 7rem 0;
-
+            position: relative;
+            margin-left: 0;
         }
 
         .overview_heading{
             padding-top: 100px;
         }
         .overview-title{
-            font-size: 64px;
+            font-size: clamp(40px, 8vw,94px);
             font-style: normal;
             font-weight: 400;
             line-height: 64px; /* 100% */
@@ -1632,7 +2039,7 @@ body {
             font-weight: 400;
             letter-spacing: -3.2px;
             @media (max-width: $sm){
-                font-size: 40px;
+                
                 margin-top: 94px;
             }
         }
@@ -1645,7 +2052,7 @@ body {
         }
         .overview-text{
             padding-top: 10px;
-            font-size: 18px;
+            font-size: 12px;
             font-style: normal;
             font-weight: 400;
             line-height: 30px;
@@ -1662,6 +2069,70 @@ body {
         }
     }
 }
+//End of Overview section
+
+//Overview section 2
+.overview-section-2{
+    position: relative;
+    color:#fff;
+    min-height: 100vh;
+    
+    .container-a{
+        // min-height: 100vh;
+        position: relative;
+        top: -100px;
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+        // background-color: #09774d;
+    }
+        .overview_heading{
+            padding-top: 100px;
+        }
+        .overview-title{
+            font-size: clamp(40px, 8vw,64px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 64px; /* 100% */
+            letter-spacing: -0.64px;
+        }
+        .overview-heading{
+            font-size: 120px;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -3.2px;
+            @media (max-width: $sm){
+                
+                margin-top: 94px;
+            }
+        }
+        .overview-sub-heading{
+            margin-top: 20px;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px;
+        }
+        .overview-text{
+            padding-top: 10px;
+            font-size: 12pt;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px;
+        }
+    
+    .container-b{
+        position: absolute;
+        min-height: 100vh;
+        left: 0;
+        top: -100px;
+
+        @media (max-width: $sm){
+            top: 0;
+        }
+    }
+}
+
+//End of Overview section 2
 
 .who_we_are_wwd_section{
     position: relative;
@@ -1670,10 +2141,8 @@ body {
     z-index: 1;
 
     .container{
-        
         padding-top: 7rem ;
         padding-bottom: 7rem ;
-
     }
 
     .wwd_title{
@@ -1734,4 +2203,720 @@ body {
         }
         
     }
+}
+
+//What we do page
+.what_we_do_section{
+    z-index: 10;
+
+    .what_we_do_hero{
+        font-family: 'Aeonik', serif;
+        font-size: clamp(4rem, 1.895rem + 5.806vw, 6.25rem);        
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100px; /* 100% */
+        letter-spacing: -2px;
+        z-index: 10;
+      
+    }
+
+    .what_we_do_text{
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px;
+    }
+}
+
+//what we do images section
+.what_we_do_imgs{
+    max-height: 50vh;
+    position: relative;
+
+    .custom_row{
+        min-height: 60vh;
+
+        @media(max-width: $sm){
+            overflow-x: hidden;
+        }
+    }
+
+    .what_we_do_left_img{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: auto;
+            height: clamp(15rem, 7.281rem + 20.583vw, 25.438rem);
+            @media(max-width: $sm){
+                position: relative;
+                top: -100px;
+            }
+    }
+
+    .pos{
+        position: relative;
+
+        .what_we_do_right_img{
+            position: absolute;
+            bottom: 0px;
+            max-width: 100%;
+            height:auto;
+
+            @media(min-width: $md){
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+            @media(min-width: $lg){
+                max-width: 140%;
+                overflow-x: hidden;
+        }
+    }
+    }
+    
+
+
+}
+
+//Design Construction 
+.design_construction{
+    position: relative;
+    padding: 7rem 0;
+   
+    .what_we_do_text{
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px;
+        padding-left: 0px;
+        padding-bottom: 7rem;
+        border-bottom: solid;
+        border-width: 2px;
+        @media(max-width: $sm){
+        }
+    }
+}
+
+
+.our_design{
+    position: relative;
+    font-family: "Aeonik";
+
+    .design_list_heading{
+        font-weight: 500;
+        font-size: 18pt;
+        line-height: 30px;
+    }
+
+    .design_list_text{
+        font-weight: 500;
+        font-size: 14pt;
+        line-height: 34px;
+    }
+    img{
+        width: clamp(24.5rem, 7.2679rem + 20.9286vw, 30.8125rem);
+        height: auto;
+
+        @media(min-width: $md){
+            width: clamp(2.5rem, 7.2679rem + 20.9286vw, 30.8125rem);
+            position: absolute;
+            left: -40px;
+            bottom:0;
+        }
+        @media(min-width: $lg){
+            width: clamp(2.5rem, 7.2679rem + 20.9286vw, 30.8125rem);
+            position: absolute;
+            left: 0;
+            bottom:0;
+        }
+    }
+    
+}
+
+//our design section 
+.our_design_section{
+    position: relative;
+    top: -8rem;
+
+    @media(max-width: $sm){
+        position: static;
+        padding: 7rem 0;
+    }
+    .custom_container{
+        min-height: 100vh;
+       
+        .what_we_do_text2{
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 32px;
+            padding-left: 0px;
+            padding-right: 14rem;
+    
+            @media(max-width: $sm){
+                padding: 7rem 1rem;
+            }
+        }
+    
+        .design_list_heading{
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 32px;
+        }
+    
+        .design_list{
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 34px; 
+            margin-top: 48px;
+        }
+    
+        .design_img_box{
+            position: relative;
+    
+            .design_img{
+                position: absolute;
+                right: 7rem;
+                width: 893px;
+                height: 308px;
+                flex-shrink: 0;
+                background-image: url('../assets/stock_img/BW_douglas-bagg-FB406CKGL0Q-unsplash.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                @media(max-width: $sm){
+                    position: relative;
+                    width: 350px;
+                    height: 487px;
+                }
+            }
+        }
+
+    }
+}
+
+//Planning and services 2
+.planning_services_2{
+    position: relative;
+    margin-top: 7rem;
+    color: white;
+
+    .left_bg_container{
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        padding: 0;
+        height: 100%;
+    }
+
+    .right_bg_container{
+        z-index: 15;
+        position: relative;
+        top: 0;
+
+        h1{
+            font: "Aeonik";
+            font-weight: 400;
+            font-size: clamp(3.375rem, 2.79rem + 1.613vw, 4rem);
+            line-height: 64px;
+        }
+    }
+    .planning_services_text{
+        font-family: "Aeonik";
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        padding-bottom: 7rem;
+    }
+    
+    .how_we_support_text{
+        font-family: "Aeonik";
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        padding: 7rem 0;
+    }
+
+    .right_bg_text_container{
+        z-index: 10;
+        position: relative;
+        top: 0;
+
+    }
+    .grey_bg_container{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        padding: 0;
+        height: 100%;
+        background-color: #F2F2F2;
+    }
+}
+
+//Planning and services 2 IMG
+.planning_services_2_img{
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+   
+    .left_bg_container{
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        padding: 0;
+        height: 100%;
+    }
+
+    .right_bg_container{
+        z-index: 10;
+        position: relative;
+        top: 0;
+        padding-top: 7rem;
+        padding-bottom: 4rem;
+        
+        img{
+            position: relative;
+            right: -0px;
+            @media(min-width: $lg){
+                position: relative;
+                right: -70px;
+            }
+        }
+    }
+
+    .grey_bg_container{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        padding: 0;
+        height: 100%;
+        background-color: #F2F2F2;
+    }
+}
+
+//Planning and services 2 IMG
+.planning_services_3{
+    position: relative;
+    color: #080808;
+    background-color: #F2F2F2;
+    padding-top: 7rem;
+   
+    .left_bg_container{
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        padding: 0;
+        height: 100%;
+    }
+
+    .right_bg_container{
+        z-index: 15;
+        position: relative;
+        top: 0;
+        h1{
+            font: "Aeonik";
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 64px;
+        }
+    }
+    .planning_services_text{
+        font-family: "Aeonik";
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        padding-bottom: 7rem;
+    }
+    
+    .how_we_support_text{
+        font-family: "Aeonik";
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    .right_bg_text_container{
+        z-index: 10;
+        position: relative;
+        top: 0;
+
+    }
+    .grey_bg_container{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        padding: 0;
+        height: 100%;
+        background-color: #F2F2F2;
+    }
+}
+
+//Who we are section 
+.planning_services_4{
+    position: relative;
+    color: white;
+    overflow-x: hidden;
+
+    .left_bg_container{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        padding: 0;
+        height: 100%;
+    }
+
+    .right_bg_container{
+        z-index: 15;
+        position: relative;
+        top: 0;
+        
+        h1{
+            font: "Aeonik";
+            font-size: clamp(3.375rem, 2.79rem + 1.613vw, 4rem);
+            font-weight: 400;
+        }
+    }
+    .planning_services_text{
+        font-family: "Aeonik";
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        padding-bottom: 7rem;
+    }
+    
+    .how_we_support_text{
+        font-family: "Aeonik";
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        padding: 7rem 0;
+    }
+
+    .right_bg_text_container{
+        z-index: 10;
+        position: relative;
+        top: 0;
+
+    }
+    .grey_bg_container{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        padding: 0;
+        height: 100%;
+        background-color: #F2F2F2;
+    }
+}
+
+//Footer
+.planning_services_5{
+    position: relative;
+    
+}
+//Planning and services section
+.planning_services_section{
+    background: #F2F2F2;
+    position: relative;
+    margin-top: -8rem;
+    
+    @media(max-width: $sm){
+        position: static;
+        padding: 7rem 0;
+        margin-top: 0;
+
+    }
+
+    //custom container 1
+    .custom_container{
+        position: relative;
+        top: -14rem;
+        padding-top: 7rem;
+        min-height: 150vh;
+        z-index: 5;
+
+        .custom_row{
+            min-height: 50vh;
+        }
+        .design_heading{
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 64px; /* 100% */
+            letter-spacing: -1.28px;
+        }
+    
+        .what_we_do_text{
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 32px;
+            padding-left: 0px;
+            padding-right: 14rem;
+            padding-bottom: 7rem;
+
+            @media(max-width: $sm){
+                padding: 7rem 1rem;
+            }
+        }
+
+        //Image row
+        .img_row{
+            width: 2185px;
+            height: 740px;
+            position: absolute;
+            right: 0;
+            background-image: url(../assets/stock_img/smit-patel-JMmTloWmvSI-unsplash.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+    }
+
+        //custom container 2
+    .custom_container_2{
+            position: absolute;
+            left: 0;
+            top: -14rem;
+            min-height: 150vh;
+            @media(max-width: $sm){
+                visibility: hidden;
+            }
+        }
+}
+
+
+//How we support section 
+.how_we_support_section{
+        background: #F2F2F2;
+        position: relative;
+        top: -14rem;
+
+        // margin-top: -8rem;
+
+        .custom_container{
+            position: relative;
+            min-height: 50vh;
+            z-index: 5;
+            @media(max-width: $sm){
+                padding-top: 7rem;
+            }
+
+            .heading{
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 32px;
+            }
+
+            .what_we_do_text{
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 32px;
+                padding-left: 0px;
+                padding-right: 14rem;
+                padding-bottom: 7rem;
+                @media(max-width: $sm){
+                    padding: 7rem 1rem;
+                }
+            }
+        }
+
+        //Custom empty container
+        .custom_container_2{
+            position: absolute;
+            left: 0;
+            top: 0;
+            min-height: 50vh;
+            z-index: inherit;
+        }
+}
+
+//
+.assistance_with_fund_section{
+    margin-top: -14rem;
+    min-height: 100vh;
+    padding: 7rem 0;
+    @media(max-width: $sm){
+        padding-bottom:0;
+    }
+
+    .design_heading{
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 64px; /* 100% */
+        letter-spacing: -1.28px;
+    }
+
+    .what_we_do_text{
+        margin-top: 7rem;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px;
+        padding-left: 0px;
+        @media(max-width: $sm){
+            margin-top:0;
+
+        }
+        
+
+        .assistance_with_fund_image1{
+            margin-top: 4rem;
+            width: 571px;
+            height: 357px;
+            background-image: url(../assets/stock_img/BW_damian-hutter-4jUK5aiSNPM-unsplash.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            @media(max-width: $sm){
+                width: 339px;
+                height: 235px;
+            }
+        }
+
+        .assistance_with_fund_image2{
+            margin-top: 4rem;
+            width: 571px;
+            height: 357px;
+            background-image: url(../assets/stock_img/david-b-6CIIuaV-d58-unsplash.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            @media(max-width: $sm){
+                width: 339px;
+                height: 235px;
+
+            }
+        }
+
+        .assistance_with_fund_image3{
+            margin-top: 4rem;
+            width: 571px;
+            height: 357px;
+            background-image: url(../assets/stock_img/rhiannon-elliott-Eq1cg2GTBNU-unsplash.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            @media(max-width: $sm){
+                width: 339px;
+                height: 235px;
+
+            }
+        }
+
+        @media(max-width: $sm){
+            padding: 7rem 1rem;
+        }
+    }
+}
+
+//Who we are image
+.innovation_who_we_are_section {
+    position: relative;
+    padding-top: 7rem;
+    .who_we_are_image{
+        img{
+            width: 1185px;
+            height: 668px;
+        }
+    }
+
+}
+
+.innovation_career_section{
+    min-height: 20vh;
+}
+
+//Email links
+.email_link{
+    text-decoration: none;
+}
+
+
+.phone_link{
+    text-decoration: none;
+}
+
+
+
+//Temp Page
+.temp_page_background{
+    background-color: black;
+    background-image: url('../assets/stock_img/temp_page_bg2.png');
+    // background-image: url('../assets/stock_img/david-b-6CIIuaV-d58-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+    height: 100vh;
+
+    @media(max-width: $sm){
+    background-image: url('../assets/stock_img/temp_page_bg.png');
+    }
+
+}
+
+.temp-page{
+    position: relative;
+    
+    min-height: 100vh;
+    overflow: hidden;
+    @media(max-width: $sm){
+        padding-top: 7rem;
+    }
+    @media(min-width: $md){
+        padding-top: 4rem;
+    }
+
+    .bg_img{
+        position: absolute;
+        top: 0;
+    }
+
+    .logo_img{
+        height: clamp(1.25rem, 0.65rem + 2.4vw, 2rem);
+        width: auto;
+        z-index: 10;
+        // position: absolute;
+        // top: 6rem ;
+    }
+
+    .logo_gradient_bg{
+        width: 100%;
+        height: 14rem;
+        // background: rgb(0,0,0);
+        // background: linear-gradient(180deg, rgba(0,0,0,1) 56%, rgba(255,255,255,0) 100%);
+        position: absolute;
+        top: 0;
+        z-index:5;
+
+    }
+    .row{
+        z-index: 1;
+        
+    }
+
+    .text_area {
+        z-index: 5;
+        font-family: "Gill-sans";
+        position: absolute;
+        bottom: 0;
+        padding: 2rem;
+        width: 100%;
+        color: white;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,1) 20%, rgba(255,95,37,0) 71%);        h1{
+           -webkit-text-size-adjust: 100%;
+           z-index: 10;
+            // font-weight: 800;
+        
+        }
+
+    }
+    p span {
+        display: block;
+      }
 }
