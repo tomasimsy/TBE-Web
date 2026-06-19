@@ -11182,7 +11182,7 @@ body {
     width: 100%;
     height: 160px;       /* controls image height */
     object-fit: cover;   /* prevents distortion */
-    border-radius: 6px;  /* optional polish */
+    /* border-radius: 6px;    */
 } 
 
 .contact-section .card {
