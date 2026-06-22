@@ -11294,6 +11294,19 @@ Developer added line of CSS
     display: block;
 }
 
+ 
+.scroll_x .col-lg-6{
+    flex: 0 0 600px; /* fixed width */
+}
+
+.uniform-img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    /* border-radius: 12px; optional */
+}
+
+
 @media (max-width: 768px) {
     .scroll-image-card {
         height: 220px;
