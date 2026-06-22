@@ -11303,7 +11303,15 @@ Developer added line of CSS
     width: 100%;
     height: 400px;
     object-fit: cover;
-    /* border-radius: 12px; optional */
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .uniform-img{
+        width: 100vw;      /* Fill viewport width */
+        height: 250px;     /* Adjust as needed */
+        object-fit: cover;
+    }
 }
 
 
