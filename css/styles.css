@@ -11313,4 +11313,10 @@ Developer added line of CSS
     }
 }
   
+/* what we do img */
+@media (max-width: 767px) {
+    .planning-img {
+        width: 90%;
+    }
+}
   
