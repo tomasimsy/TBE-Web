@@ -11309,10 +11309,12 @@ Developer added line of CSS
 @media (max-width: 767px) {
     .uniform-img{
         width: 100vw;      /* Fill viewport width */
-        height: 250px;     /* Adjust as needed */
-        object-fit: cover;
+        height: 210px;     /* Adjust as needed */
+        object-fit: cover;   /* Maintain aspect ratio */
     }
 }
+
+ 
 
 
 @media (max-width: 768px) {
