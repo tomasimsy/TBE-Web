@@ -157,6 +157,7 @@ body {
   position: relative;
   display: block;
 }
+
 @media (min-width: 768px) {
   .custom_navbar .custom-navbar-nav li a:before {
     content: "";
@@ -172,6 +173,22 @@ body {
     transition: .15s all ease-out;
   }
 }
+
+/* Mobile only */
+@media (max-width: 767px) {
+
+  .custom_navbar .custom-navbar-nav li a {
+    // color: #fff;
+    transition: color .2s ease;
+  }
+
+  .custom_navbar .custom-navbar-nav li a:focus,
+  .custom_navbar .custom-navbar-nav li a:active {
+    color: #f9bf29;
+  }
+
+}
+
 .custom_navbar .custom-navbar-nav li a:hover {
   opacity: 1;
 }
