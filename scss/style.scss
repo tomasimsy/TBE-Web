@@ -10,6 +10,7 @@ body {
   overflow-x: hidden;
   position: relative;
   font-family: "Aeonik";
+  
 }
 
 
@@ -2124,12 +2125,62 @@ ul li:last-child {
   position: relative;
   overflow-x: clip;
   overflow-y: visible;
+  
 }
+
+/* MOBILE */
+.what_we_do_section {
+  min-height: 600px;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .what_we_do_section {
+    min-height: 750px;
+  }
+}
+
+/* LAPTOP */
+@media (min-width: 992px) {
+  .what_we_do_section {
+    min-height: 850px;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1200px) {
+  .what_we_do_section {
+    min-height: 950px;
+  }
+}
+
+/* LARGE DESKTOP */
+@media (min-width: 1400px) {
+  .what_we_do_section {
+    min-height: 1000px;
+  }
+}
+
+
+
 .what_we_do_section .text_image_section img {
   position: absolute;
-  max-height: 100%;
   width: clamp(25rem, 3.25rem + 87vw, 77.375rem);
+  height: clamp(18rem, 2rem + 62vw, 55rem);
+  object-fit: cover;
+  background-color: #09774d;
+  padding-bottom: 0;
 }
+
+
+
+/* Desktop & tablet */
+// @media (min-width: 768px) {
+//   .what_we_do_section .text_image_section img {
+//     padding-bottom: 80px;
+//   }
+// }
+
 .what_we_do_section .what_we_do_hero {
   font-family: "Aeonik", serif;
   font-size: clamp(3rem, 1.895rem + 5.806vw, 6.25rem);
@@ -2143,6 +2194,7 @@ ul li:last-child {
 
 .innovation_row {
     height: 100vh;
+    
 }
 
 @media (max-width: 767.98px) {
