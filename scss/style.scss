@@ -356,17 +356,21 @@ body {
 .hero_container {
   position: relative;
   top: 1px;
-  min-height: 180vh;
+  min-height: 100vh; /* tablet + mobile default */
   background-color: #0a0a0a;
   color: #fff;
   overflow-x: hidden;
   overflow-y: hidden;
 }
-@media (width <= 768px) {
+
+/* large screens (desktop and up) */
+@media (min-width: 992px) {
   .hero_container {
-    min-height: 100vh;
+    min-height: 180vh;
   }
 }
+
+
 .hero_container .hero-heading {
   font-size: clamp(3rem, 1.895rem + 5.806vw, 6.25rem);
   font-style: normal;
