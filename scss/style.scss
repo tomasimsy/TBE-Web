@@ -2133,26 +2133,32 @@ ul li:last-child {
 }
 
 /* MOBILE */
+/* MOBILE */
 .what_we_do_section {
   min-height: 600px;
 }
 
-/* TABLET */
-@media (min-width: 768px) {
+/* iPad Mini / iPad Air / Tablets */
+@media (min-width: 768px) and (max-width: 991.98px) {
   .what_we_do_section {
-    min-height: 750px;
+    max-height: 620px; /* Adjust as needed (600–650px works well) */
+  }
+
+  .text_image_section img {
+    bottom: -350px;
+    right: 0px;
   }
 }
 
 /* LAPTOP */
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
   .what_we_do_section {
-    min-height: 850px;
+    max-height: 850px;
   }
 }
 
 /* DESKTOP */
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1399.98px) {
   .what_we_do_section {
     min-height: 950px;
   }
@@ -2174,6 +2180,14 @@ ul li:last-child {
   object-fit: cover;
   background-color: #09774d;
   padding-bottom: 0;
+}
+
+/* iPad Mini / Air */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .what_we_do_section .text_image_section img {
+    width: clamp(22rem, 4rem + 60vw, 34rem);
+    height: clamp(16rem, 3rem + 45vw, 26rem);
+  }
 }
 
 
@@ -2201,6 +2215,7 @@ ul li:last-child {
     
 }
 
+// For mobile screen
 @media (max-width: 767.98px) {
     .innovation_row {
         height: 70vh;
