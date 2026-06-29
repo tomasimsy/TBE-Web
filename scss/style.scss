@@ -507,7 +507,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  background-color: #84dfbc;
+  // background-color: #84dfbc;
   min-height: 150vh;
   padding-left: 4rem;
   padding-top: 14rem;
@@ -793,7 +793,7 @@ body {
 
 .design-admin {
   padding: 7rem 0 0 0;
-  background-color: red;
+  // background-color: red;
 }
 
 .Planning-Services-Section {
@@ -2178,7 +2178,7 @@ ul li:last-child {
   width: clamp(25rem, 3.25rem + 87vw, 77.375rem);
   height: clamp(18rem, 2rem + 62vw, 55rem);
   object-fit: cover;
-  background-color: #09774d;
+   
   padding-bottom: 0;
 }
 
@@ -2186,6 +2186,7 @@ ul li:last-child {
 @media (min-width: 768px) and (max-width: 991.98px) {
   .what_we_do_section .text_image_section img {
     width: clamp(22rem, 4rem + 60vw, 34rem);
+    
     height: clamp(16rem, 3rem + 45vw, 26rem);
   }
 }
