@@ -1467,7 +1467,16 @@ ul li:last-child {
 .benefit-box-one {
   position: relative;
   margin-top: 18rem;
+ }
+
+/* Mobile + Tablet */
+@media (max-width: 991.98px) {
+  .benefit-box-one {
+    height: 100px;
+  }
 }
+
+
 .benefit-box-one img {
   position: absolute;
   top: -300px;
