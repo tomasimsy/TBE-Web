@@ -1490,13 +1490,21 @@ ul li:last-child {
 }
  
 
-.our-benefit-title, .explore-career-opportunities {
+.our-benefit-title,
+.explore-career-opportunities {
   font-family: "Aeonik";
-  font-size: clamp(44px, 4vw, 64px);
+  font-size: 58px;
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: -0.01em;
   text-align: left;
+}
+
+@media (min-width: 992px) {
+  .our-benefit-title,
+  .explore-career-opportunities {
+    font-size: 64px;
+  }
 }
 
  
