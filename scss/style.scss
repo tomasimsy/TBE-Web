@@ -1752,6 +1752,82 @@ ul li:last-child {
   position: relative;
   top: -1px;
 }
+ 
+
+.footer-section .contents-contact {
+  min-height: 40vh;
+  padding: 7rem 0;
+}
+
+.footer-section .contents-contact .copyright-title {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+@media (max-width: 768px) {
+  .footer-section .contents-contact .copyright-title {
+    padding: 7rem 0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-section .contents-contact .copyright-title {
+    padding: 7rem 0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+.footer-section .contents-contact .copyright-info-title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  margin-top: 80px;
+}
+
+@media (max-width: 576px) {
+  .footer-section .contents-contact .copyright-info-title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+.footer-section .contents-contact .copyright-info-text {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.footer-section .contents-contact .footer-links {
+  font-size: 12px;
+  font-family: "Aeonik";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #bdc739;
+}
+
+.footer-section .contents-contact .footer-links div {
+  margin-top: 24px;
+}
+
+.footer-section .contents-contact .footer-links a {
+  color: #bdc739;
+  text-decoration: none;
+}
+
+
 .footer-section .contents {
   min-height: 80vh;
   padding: 7rem 0;
